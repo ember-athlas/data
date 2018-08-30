@@ -1,0 +1,1 @@
+export { default } from '@ember-athlas/data/components/data-manager/component';

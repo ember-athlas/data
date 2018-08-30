@@ -1,0 +1,9 @@
+{{#if @label}}
+	{{@label}}
+{{else if (has-block)}}
+	{{yield}}
+{{/if}}
+
+{{#if this.sortable}}
+	<i class="col-sort fa fa-sort-{{this.direction}}"></i>
+{{/if}}

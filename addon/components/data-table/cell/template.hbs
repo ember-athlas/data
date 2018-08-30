@@ -1,0 +1,7 @@
+{{#if hasBlock}}
+	{{yield}}
+{{else}}
+	{{#if column.property}}
+		{{get item column.property}}
+	{{/if}}
+{{/if}}

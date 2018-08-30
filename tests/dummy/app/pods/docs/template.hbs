@@ -1,0 +1,16 @@
+<DocsViewer as |viewer|>
+
+	<viewer.nav as |nav|>
+		{{nav.item 'Introduction' 'docs.index'}}
+		{{nav.item 'Table' 'docs.table'}}
+	</viewer.nav>
+
+  	<viewer.main>
+    {{!-- <div class="docs-container">
+      <div class="docs-section"> --}}
+        {{outlet}}
+      {{!-- </div>
+    </div> --}}
+	</viewer.main>
+
+</DocsViewer>

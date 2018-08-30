@@ -1,0 +1,16 @@
+{{#if @table.compact}}
+	{{#if @head}}
+		<head.column class={{@columnClass}} label={{@label}} property={{@property}} sortable={{@sortable}} width={{@width}} >
+			{{named-yield 'header'}}
+			{{yield (hash header=(component 'block-for' 'header'))}}
+		</head.column>
+	{{else if @row}}
+		{{#if (has-block)}}
+			<row.cell class={{@cellClass}} >
+				{{yield (hash header=(component 'block-for' 'header'))}}
+			</row.cell>
+		{{else}}
+			<row.cell class={{@cellClass}} />
+		{{/if}}
+	{{/if}}
+{{/if}}

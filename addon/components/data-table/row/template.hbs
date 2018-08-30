@@ -1,0 +1,9 @@
+{{yield (hash
+	open=open
+	index=index
+	expanded=(component 'block-for' 'expanded')
+	toggle=(action 'toggleExpanded')
+	cell=(component 'data-table/cell' table=table item=item row=this)
+)}}
+
+{{named-yield 'expanded' id=(concat 'named-yield-' elementId) tagName='tr' class=(if open 'expanded' 'collapsed')}}

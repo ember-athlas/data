@@ -1,0 +1,5 @@
+{{#each @table.items as |item index|}}
+	{{#data-table/row item=item index=index table=@table as |row|}}
+		{{yield row item}}
+	{{/data-table/row}}
+{{/each}}

@@ -1,0 +1,19 @@
+{{#if compact}}
+	{{#data-table/head table=this as |head|}}
+		{{yield (hash
+			column=(component 'data-table/column' table=this head=head)
+		)}}
+	{{/data-table/head}}
+
+	{{#data-table/body table=this as |row item|}}
+		{{yield (hash
+			column=(component 'data-table/column' table=this item=item row=row)
+		) item row}}
+	{{/data-table/body}}
+{{else}}
+	{{yield (hash
+		head=(component 'data-table/head' table=this)
+		body=(component 'data-table/body' table=this)
+		column=(component 'data-table/column' table=this)
+	)}}
+{{/if}}
